@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Election Results</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body onload="init();">
+
+    <div style="background-color: black; max-height: 85px;" class="container-fluid" >
+      <div class="row">
+        <div class="col-lg-12">
+
+          <h1 style="color: white;" class="text-center">Online Election System</h1>
+          
+          <div style="margin-top: 50px;" id="loader">
+            <p class="text-center">Loading...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container-fluid" style="display: inline;">
+     <div class="row">
+       <div class="col-md-6">
+          <a data-toggle="modal" data-target="#addelection" style="margin-left:530px; margin-top: 10px;" class="btn btn-success">Add Election</a> 
+       </div>
+       <div class="col-md-6">
+          <a target="_blank" style="margin-left:20px; margin-top: 10px;" class="btn btn-primary" onclick="window.open(window.location + 'signup.html', '_blank');">Register Voter</a> 
+       </div>
+     </div>
+
+    </div>
+
+
+
+    <div style="margin-top:15px;" id="content" class="container-fluid">
+      <div  class="row">
+        <div id="temp1" style="visibility: hidden;"  class="col-md-4">
+            <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 id="tab1" class="panel-title">Developers</h3>
+          </div>
+        </div>
+           <table  class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Candidate Name </th>
+                  <th scope="col">Vote Count </th>
+                </tr>
+              </thead>
+              <tbody id="1">
+              </tbody>
+            </table>
+            <form id="form1" onSubmit="App.check1(); return false;">
+              <div class="form-group">
+                <label for="candidatesSelect1">Select Candidate</label>
+                <select class="form-control" id="candidatesSelect1">
+                </select>
+              </div>
+              <button type="submit" name="1" class="btn btn-success">Vote</button>
+              
+            </form>
+            <hr/>
+        </div>
+        <div id="temp2" style="visibility: hidden;" class="col-md-4">
+           <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3  id="tab2"  class="panel-title">Developers</h3>
+          </div>
+        </div>
+          <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Candidate Name </th>
+                  <th scope="col">Vote Count </th>
+                </tr>
+              </thead>
+              <tbody id="2">
+              </tbody>
+            </table>
+            <form id="form2" onSubmit="App.check2(); return false;">
+              <div class="form-group">
+                <label for="candidatesSelect2">Select Candidate</label>
+                <select class="form-control" id="candidatesSelect2">
+                </select>
+              </div>
+              <button type="submit" name="2" class="btn btn-success">Vote</button>
+              
+            </form>
+
+            <hr/>
+        </div>
+        <div id="temp3" style="visibility: hidden;" class="col-md-4">
+           <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 id="tab3" class="panel-title">Developers</h3>
+          </div>
+        </div>
+          <table  class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Candidate Name </th>
+                  <th scope="col">Vote Count </th>
+                </tr>
+              </thead>
+              <tbody id="3">
+              </tbody>
+            </table>
+            <form id="form3" onSubmit="App.check3(); return false;">
+              <div class="form-group">
+                <label for="candidatesSelect3">Select Candidate</label>
+                <select class="form-control" id="candidatesSelect3">
+                </select>
+              </div>
+              <button type="submit" name="3" class="btn btn-success">Vote</button>
+              
+            </form>
+
+            <hr/>
+        </div>
+      </div>
+
+      <div  class="row">
+        <div id="temp4" style="visibility: hidden;"  class="col-md-4">
+            <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 id="tab4" class="panel-title">Developers</h3>
+          </div>
+        </div>
+           <table  class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Candidate Name </th>
+                  <th scope="col">Vote Count </th>
+                </tr>
+              </thead>
+              <tbody id="4">
+              </tbody>
+            </table>
+            <form id="form4" onSubmit="App.check4(); return false;">
+              <div class="form-group">
+                <label for="candidatesSelect4">Select Candidate</label>
+                <select class="form-control" id="candidatesSelect4">
+                </select>
+              </div>
+              <button type="submit" name="4" class="btn btn-success">Vote</button>
+              
+            </form>
+            <hr/>
+        </div>
+        <div id="temp5" style="visibility: hidden;" class="col-md-4">
+           <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3  id="tab5"  class="panel-title">Developers</h3>
+          </div>
+        </div>
+          <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Candidate Name </th>
+                  <th scope="col">Vote Count </th>
+                </tr>
+              </thead>
+              <tbody id="5">
+              </tbody>
+            </table>
+            <form id="form5" onSubmit="App.check5(); return false;">
+              <div class="form-group">
+                <label for="candidatesSelect5">Select Candidate</label>
+                <select class="form-control" id="candidatesSelect5">
+                </select>
+              </div>
+              <button type="submit" name="5" class="btn btn-success">Vote</button>
+              
+            </form>
+
+            <hr/>
+        </div>
+        <div id="temp6" style="visibility: hidden;" class="col-md-4">
+           <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 id="tab6" class="panel-title">Developers</h3>
+          </div>
+        </div>
+          <table  class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Candidate Name </th>
+                  <th scope="col">Vote Count </th>
+                </tr>
+              </thead>
+              <tbody id="6">
+              </tbody>
+            </table>
+            <form id="form6" onSubmit="App.check6(); return false;">
+              <div class="form-group">
+                <label for="candidatesSelect6">Select Candidate</label>
+                <select class="form-control" id="candidatesSelect6">
+                </select>
+              </div>
+              <button type="submit" name="6" class="btn btn-success">Vote</button>
+              
+            </form>
+
+            <hr/>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <p>
+        <video style="visibility: hidden;" width=300 height=300 id="video" autoplay></video>
+        <br>
+        <canvas  style="visibility: hidden;"  id="myCanvas" width="300" height="220"></canvas>
+    </p>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+
+
+
+
+
+
+
+  <div class="modal fade" id="addelection" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">Add Election</h5>
+          <button class="close" data-dismiss="modal"><span></span></button>  
+        </div>
+
+        <div class="modal-body">
+          <form action=""onSubmit="App.addElection(); return false;">
+
+            <div class="form-group">
+              <label for="name" class="form-control-label">Election Name</label>
+              <input id="electionname" type="name" name="user_name" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label for="username" class="form-control-label">Candidate Name 1</label>
+              <input id="cand1" type="username" name="user_email" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label for="password" class="form-control-label">Candidate Name 2</label>
+              <input id="cand2" type="username" name="user_password" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label for="cpassword" class="form-control-label">Candidate Name 3</label>
+              <input id="cand3" type="username"  name="cuser_password" class="form-control">
+            </div>
+          
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-success" type="submit" >Add Election</button>
+
+        </div>
+        </form>
+        </div>
+
+      </div>
+      
+    </div>
+  </div>
+
+
+</html>
