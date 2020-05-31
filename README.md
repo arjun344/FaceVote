@@ -1,10 +1,6 @@
 
-# Election - DAPP Tutorial
-Build your first decentralized application, or Dapp, on the Ethereum Network with this tutorial!
-
-**Full Free Video Tutorial:**
-https://youtu.be/3681ZYbDSSk
-
+# Facial Recognition based eVoting DAPP
+A decentralized application, or Dapp, on the Ethereum Network with facial recognition support
 
 Follow the steps below to download, install, and run this project.
 
@@ -14,19 +10,19 @@ Install these prerequisites to follow along with the tutorial. See free video tu
 - Truffle: https://github.com/trufflesuite/truffle
 - Ganache: http://truffleframework.com/ganache/
 - Metamask: https://metamask.io/
+- Kairos: Create a kairos account and get app_id and api_key https://developer.kairos.com/admin
 
 
 ## Step 1. Clone the project
-`git clone https://github.com/dappuniversity/election`
+`git clone https://github.com/arjun344/FaceVote`
 
 ## Step 2. Install dependencies
 ```
 $ cd election
-$ npm install
+$ npm install -g truffle
 ```
 ## Step 3. Start Ganache
-Open the Ganache GUI client that you downloaded and installed. This will start your local blockchain instance. See free video tutorial for full explanation.
-
+Open the Ganache GUI client that you downloaded and installed. This will start your local blockchain instance.
 
 ## Step 4. Compile & Deploy Election Smart Contract
 `$ truffle migrate --reset`
@@ -42,5 +38,5 @@ See free video tutorial for full explanation of these steps:
 `$ npm run dev`
 Visit this URL in your browser: http://localhost:3000
 
-If you get stuck, please reference the free video tutorial.
+***Meta-mask sometime does not loads properly for that just go to Metamask-->Settings-->Connections-->connect to localhost***
 
