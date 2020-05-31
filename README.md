@@ -38,5 +38,5 @@ See free video tutorial for full explanation of these steps:
 `$ npm run dev`
 Visit this URL in your browser: http://localhost:3000
 
-***Meta-mask sometime does not loads properly for that just go to Metamask-->Settings-->Connections-->connect to localhost***
+***Meta-mask sometime does not loads properly for that just go to Metamask-->Settings-->Connections-->connect to localhost and refresh the page***
 
